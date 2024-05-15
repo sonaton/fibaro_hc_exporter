@@ -30,11 +30,11 @@ docker run -d --name fibaro_hc_exporter \
 ```
 
 Base variables:
-- hub_url: url of fibaro hub
-- hub_user: hub user
-- hub_password: user password
+- **hub_url**: url of fibaro hub
+- **hub_user**: hub user
+- **hub_password**: user password
 
 Additional variables:
-- update_interval: update time in seconds (default: "60")
-- enabled: export only enabled devices (default: "True")
-- visible: export only visible devices (default: "True")
+- **update_interval**: update time in seconds (default: "60")
+- **enabled**: export only enabled devices (default: "True")
+- **visible**: export only visible devices (default: "True")

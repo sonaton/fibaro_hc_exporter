@@ -26,11 +26,11 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-    - name: Push latest image
-      run: docker push $IMAGE_NAME:latest
-
     - name: Push tagget image
       run: |
         tag=$(date +%s)
         docker tag $IMAGE_NAME:latest $IMAGE_NAME:$tag
         docker push $IMAGE_NAME:$tag
+
+    - name: Push latest image
+      run: docker push $IMAGE_NAME:latest
